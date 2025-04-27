@@ -105,6 +105,12 @@
 	      <id>nexus</id>
 	      <name>Sasi Snapshot Nexus Repository </name>
 	      <url>http://13.61.185.135:8081/repository/maven_webapp-snapshot/</url>
+	   	<releases>
+              	<enabled>false</enabled>  <!-- Disable release versions here -->
+       		 </releases>
+        	<snapshots>
+            	<enabled>true</enabled>  <!-- Enable snapshot versions here -->
+        	</snapshots>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
