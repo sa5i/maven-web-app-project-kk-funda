@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Sasi Releases Nexus Repository</name>
-	      <url>http://13.61.185.135:8081/repository/maven-releases/</url>
+	      <url>http://13.61.185.135:8081/repository/maven_webapp-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Sasi Snapshot Nexus Repository </name>
-	      <url>http://13.61.185.135:8081/repository/maven-snapshots/</url>
+	      <url>http://13.61.185.135:8081/repository/maven_webapp-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
