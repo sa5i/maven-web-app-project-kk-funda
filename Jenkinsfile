@@ -33,7 +33,7 @@ pipeline {
             steps {
                 sh """
             curl -u admin:admin \
-            --upload-file /var/lib/jenkins/workspace/stg-app-declarative-PL/target/maven-web-application.war \
+            --upload-file /var/lib/jenkins/workspace/MBPL-stg-app_uat/target/maven-web-application.war \
             "http://13.49.65.135:8080/manager/text/deploy?path=/maven-web-application&update=true"
         """
             }
