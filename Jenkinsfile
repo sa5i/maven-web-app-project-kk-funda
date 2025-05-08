@@ -38,6 +38,25 @@ pipeline {
         """
             }
         }
+
+        post {
+        success {
+            emailext(
+                subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: "The Jenkins job succeeded!\n\nCheck details: ${env.BUILD_URL}",
+                to: "skdevops025@gmail.com"
+            )
+        }
+        failure {
+            emailext(
+                subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: "The Jenkins job failed.\n\nCheck details: ${env.BUILD_URL}",
+                to: "skdevops025@gmail.com"
+            )
+        }
+        always {
+            echo 'Build finished. Notification sent.'
+        }
         
         
     }
