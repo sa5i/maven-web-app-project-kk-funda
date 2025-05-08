@@ -42,21 +42,25 @@ pipeline {
 
         post {
         success {
-            emailext(
-                subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: "The Jenkins job succeeded!\n\nCheck details: ${env.BUILD_URL}",
-                to: "skdevops025@gmail.com"
+            emailext (
+                to: 'skdevops025@gmail.com',
+                subject: "SUCCESS: ${env.JOB_NAME} Build #${env.BUILD_NUMBER}",
+                body: """<p>Good news! The build <b>${env.BUILD_NUMBER}</b> of <b>${env.JOB_NAME}</b> completed successfully.</p>
+                         <p>Check details at: <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
+                mimeType: 'text/html'
             )
         }
         failure {
-            emailext(
-                subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: "The Jenkins job failed.\n\nCheck details: ${env.BUILD_URL}",
-                to: "skdevops025@gmail.com"
+            emailext (
+                to: 'skdevops025@gmail.com',
+                subject: "FAILURE: ${env.JOB_NAME} Build #${env.BUILD_NUMBER}",
+                body: """<p>The build <b>${env.BUILD_NUMBER}</b> of <b>${env.JOB_NAME}</b> has failed.</p>
+                         <p>Check details at: <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
+                mimeType: 'text/html'
             )
         }
         always {
-            echo 'Build finished. Notification sent.'
+            echo 'Build finished. Email notification attempted.'
         }
         
         
