@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to AWS/GCP-DevOps/SRE</h1>
+<h1 align="center">Welcome to Learnings</h1>
 <h1 align="center"> DevOps</h1>
 <hr>
 <br>
