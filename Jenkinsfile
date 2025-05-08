@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'prod', credentialsId: 'github-pat', url: 'https://github.com/sa5i/maven-web-app-project-kk-funda.git'
+                git branch: 'uat', credentialsId: 'github-pat', url: 'https://github.com/sa5i/maven-web-app-project-kk-funda.git'
             }
         }
         stage('Maven compile') {
