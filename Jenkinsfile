@@ -34,7 +34,7 @@ pipeline {
                 sh """
             curl -u admin:admin \
             --upload-file /var/lib/jenkins/workspace/stg-app-declarative-PL/target/maven-web-application.war \
-            "http://13.49.65.135:8080/manager/text/deploy?path=/maven-web-application&update=true"
+            "http://13.61.194.134:8080/manager/text/deploy?path=/maven-web-application&update=true"
         """
             }
         }
