@@ -21,7 +21,7 @@
 		<spring.version>5.3.34</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://16.16.187.55:9000/</sonar.host.url>
+		<sonar.host.url>51.21.221.227:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin1</sonar.password> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Sasi Releases Nexus Repository</name>
-	      <url>http://16.16.202.28:8081/repository/maven_webapp-release/</url>
+	      <url>51.21.134.226:8081/repository/maven_webapp-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Sasi Snapshot Nexus Repository </name>
-	      <url>http://16.16.202.28:8081/repository/maven_webapp-snapshot/</url>
+	      <url>51.21.134.226:8081/repository/maven_webapp-snapshot/</url>
 	   	<releases>
               	<enabled>false</enabled>  <!-- Disable release versions here -->
        		 </releases>
