@@ -94,13 +94,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Sasi Releases Nexus Repository</name>
-	      <url>http://51.20.124.241:8081/repository/maven_webapp-release/</url>
+	      <url>http://34.58.9.91:8081/repository/maven_webapp-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Sasi Snapshot Nexus Repository </name>
-	      <url>http://51.20.124.174:8081/repository/maven_webapp-snapshot/</url>
+	      <url>http://34.58.9.91:8081/repository/maven_webapp-snapshot/</url>
 	   	<releases>
               	<enabled>false</enabled>  <!-- Disable release versions here -->
        		 </releases>
