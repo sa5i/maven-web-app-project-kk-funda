@@ -5,7 +5,9 @@
 	<groupId>com.kk</groupId>
 	<artifactId>maven-web-application-kkfunda</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.3-SNAPSHOT</version>
+
+	<version>0.0.8</version>
+
 	
 	<name>maven-web-application</name>
 
@@ -21,9 +23,11 @@
 		<spring.version>5.3.34</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://65.0.93.9:9000/</sonar.host.url>
+
+		<sonar.host.url>http://34.69.202.63:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>password</sonar.password> 
+		<sonar.password>admin1</sonar.password> 
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -45,12 +49,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>org.mockito</groupId>
@@ -91,20 +90,31 @@
 			<scope>provided</scope>
 		</dependency>
 		
+		
 	</dependencies>
 	
 	<distributionManagement>
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>KK FUNDA Releases Nexus Repository</name>
-	      <url>http://13.234.59.75:8081/repository/jio-release/</url>
+
+	      <name>Sasi Releases Nexus Repository</name>
+	      <url>http://34.9.23.9:8081/repository/maven-web-app-release/</url>
+
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>KK FUNDA Snapshot Nexus Repository </name>
-	      <url>http://13.234.59.75:8081/repository/jio-snapshot/</url>
+
+	      <name>Sasi Snapshot Nexus Repository </name>
+	      <url>http://34.9.23.9:8081/repository/maven-web-app-snapshot/</url>
+	   	<releases>
+              	<enabled>false</enabled>  <!-- Disable release versions here -->
+       		 </releases>
+        	<snapshots>
+            	<enabled>true</enabled>  <!-- Enable snapshot versions here -->
+        	</snapshots>
+
 	    </snapshotRepository>
 	    
 	</distributionManagement>
@@ -112,6 +122,9 @@
 	<build>
 		<finalName>maven-web-application</finalName>
 		
+  
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -122,6 +135,11 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
+			<plugin>
+      			<groupId>org.sonarsource.scanner.maven</groupId>
+    			  <artifactId>sonar-maven-plugin</artifactId>
+  			    <version>3.9.1.2184</version>
+   			 </plugin>
 
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
