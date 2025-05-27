@@ -5,7 +5,9 @@
 	<groupId>com.kk</groupId>
 	<artifactId>maven-web-application-kkfunda</artifactId>
 	<packaging>war</packaging>
+
 	<version>0.0.8</version>
+
 	
 	<name>maven-web-application</name>
 
@@ -21,9 +23,11 @@
 		<spring.version>5.3.34</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
+
 		<sonar.host.url>http://34.69.202.63:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin1</sonar.password> 
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -93,12 +97,15 @@
 	
 	    <repository>
 	      <id>nexus</id>
+
 	      <name>Sasi Releases Nexus Repository</name>
 	      <url>http://34.9.23.9:8081/repository/maven-web-app-release/</url>
+
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
+
 	      <name>Sasi Snapshot Nexus Repository </name>
 	      <url>http://34.9.23.9:8081/repository/maven-web-app-snapshot/</url>
 	   	<releases>
@@ -107,6 +114,7 @@
         	<snapshots>
             	<enabled>true</enabled>  <!-- Enable snapshot versions here -->
         	</snapshots>
+
 	    </snapshotRepository>
 	    
 	</distributionManagement>
